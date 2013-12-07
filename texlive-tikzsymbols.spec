@@ -6,7 +6,7 @@
 # catalog-version 3.0
 Name:		texlive-tikzsymbols
 Version:	3.0
-Release:	3
+Release:	4
 Summary:	Some symbols created using TikZ
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pgf/contrib/tikzsymbols
