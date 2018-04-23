@@ -1,5 +1,5 @@
 Name:		texlive-tikzsymbols
-Version:	4.07
+Version:	4.10
 Release:	1
 Summary:	Some symbols created using TikZ
 Group:		Publishing
