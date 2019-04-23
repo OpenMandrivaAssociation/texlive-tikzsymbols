@@ -1,6 +1,6 @@
 Name:		texlive-tikzsymbols
-Version:	4.10a
-Release:	2
+Version:	4.10c
+Release:	1
 Summary:	Some symbols created using TikZ
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pgf/contrib/tikzsymbols
