@@ -3,7 +3,7 @@ Version:	61300
 Release:	2
 Summary:	Some symbols created using TikZ
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/graphics/pgf/contrib/tikzsymbols
+URL:		https://www.ctan.org/tex-archive/graphics/pgf/contrib/tikzsymbols
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tikzsymbols.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tikzsymbols.doc.r%{version}.tar.xz
