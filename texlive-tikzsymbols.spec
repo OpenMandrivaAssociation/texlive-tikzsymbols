@@ -1,44 +1,21 @@
-Name:		texlive-tikzsymbols
-Version:	61300
-Release:	2
+%global tl_name tikzsymbols
+%global tl_revision 61300
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	4.12a
+Release:	%{tl_revision}.1
 Summary:	Some symbols created using TikZ
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/graphics/pgf/contrib/tikzsymbols
-License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tikzsymbols.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tikzsymbols.doc.r%{version}.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tikzsymbols.source.r%{version}.tar.xz
+License:	lppl1.3c
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/tikzsymbols.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/tikzsymbols.doc.r%{tl_revision}.tar.xz
+Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/tikzsymbols.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-The package provides various emoticons, cooking symbols and
-trees.
+The package provides various emoticons, cooking symbols and trees.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/latex/tikzsymbols
-%doc %{_texmfdistdir}/doc/latex/tikzsymbols
-#- source
-%doc %{_texmfdistdir}/source/latex/tikzsymbols
-
-#-----------------------------------------------------------------------
-%prep
-%setup -c -a1 -a2
-%autopatch -p1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
